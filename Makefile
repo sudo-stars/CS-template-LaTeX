@@ -1,0 +1,12 @@
+all: main.pdf
+
+view: main.pdf
+	atril $<
+
+main.pdf: main.tex
+	pdflatex $<
+
+clean:
+	rm -f *.log *.aux *.bbl *.blg *.toc *.pdf *.out
+
+.PHONY: all view clean
