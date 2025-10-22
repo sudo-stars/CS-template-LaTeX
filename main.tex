@@ -1,17 +1,30 @@
-\documentclass[12pt,oneside,a4paper]{article}
+\documentclass[11pt,oneside,a4paper]{article}
 
+\usepackage{enumitem}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage[english]{babel}
 \usepackage{graphicx, float}
 \graphicspath{{images/}}
-\usepackage{fancyhdr}
+\usepackage[table,xcdraw]{xcolor} 
 \usepackage[letterpaper, top=1in, left=1in, right=1in, bottom=0.8in, heightrounded]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}      
+\fancyhf{}             
+\fancyhead[LO,L]{WS 25/26}
+\fancyhead[CO,C]{Group XX}
+\fancyhead[RO,R]{\today} 
+\fancyfoot[LO,L]{}
+\fancyfoot[CO,C]{\thepage}
+\fancyfoot[RO,R]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
 
+%-------------------------------------------------------%
 
 \title{\textbf{CS Assignment Template}}
 \author{%
-  17. October 2025 \\[1em]
+  \today \\[1em]
   \begin{tabular}{c|c|c}
       {Name1} & {Name2} & {Name3} \\
       Matrikelnr1 & Matrikelnr2 & Matrikelnr3 \\
@@ -19,23 +32,20 @@
 }
 \date{}
 
-%%%
-\fancyhead[LO,L]{WS 25/26}
-\fancyhead[CO,C]{Gruppennr}
-\fancyhead[RO,R]{\today} % or a different date
-\fancyfoot[LO,L]{}
-\fancyfoot[CO,C]{\thepage}
-\fancyfoot[RO,R]{}
-\renewcommand{\headrulewidth}{0.2pt}
-\renewcommand{\footrulewidth}{0.2pt}
-%%%%
-
+%-------------------------------------------------------%
 \begin{document}
-
 \maketitle
 \thispagestyle{fancy}
 
 \section{Aufgabe 1}
 \subsection{a)}
 
+
+\newpage
+
+\section{Aufgabe 2}
+\subsection{a)}
+
+
 \end{document}
+%-------------------------------------------------------%
