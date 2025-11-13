@@ -37,14 +37,106 @@
 \maketitle
 \thispagestyle{fancy}
 
+%-------------------------------------------------------%
 \section{Aufgabe 1}
 \subsection{a)}
+Image insert Example
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{images/name.jpg}
+\end{figure}
 
-
+%-------------------------------------------------------%
 \newpage
-
 \section{Aufgabe 2}
 \subsection{a)}
+Hoare-Kalkül Verifikation Example
+\begin{align*}
+    & & \langle a.length-i=m \wedge i<a.length \rangle \\
+    & & \langle a.length-(i+1)<m \rangle \\
+    & \qquad \mathbf{if} (\text{ s } == \text{ a[i] }) \{ \\
+    & & \langle a.length-(i+1)<m \wedge (\text{ s }= \text{ a[i] })\rangle \\
+    & \qquad \qquad \text{res = true;} \\
+    & & \langle a.length-(i+1)<m \rangle \\
+    & \qquad \} \\
+    & & \langle a.length-(i+1)<m \rangle \\
+    & \quad \text{s = s} + a[i]; \\
+    & & \langle a.length-(i+1)<m \rangle \\
+    & \quad i=i+1 \\
+    & & \langle a.length-i<m \rangle \\
+\end{align*}
+
+%-------------------------------------------------------%
+\newpage
+\section{Aufgabe 7}
+\subsection{(Programmierung) }
+Coding Example
+%-------------Insert code in minted-------------------%
+\begin{minted}[fontsize=\small, breaklines, frame=single]{java}
+public class Statistics{
+
+    private int[] werte;
+    private int counter;
+
+    //Konstruktor
+    public Statistics(){
+        this.werte = new int[100];
+        this.counter = 0;
+    }
+\end{minted}
+
+
+%-------------------------------------------------------%
+\newpage %Math Example Induktion
+\section{Aufgabe 3}
+\subsection{(Verallgemeinerte Bernoulli-Ungleichung) }
+\textbf{Gegeben:}
+$n \in \mathbb{N}$, $a_1,...,a_k \geq -1$
+\[
+\prod_{k=1}^{n} (1 + a_k) \geq 1 + \sum_{k=1}^{n} a_k
+\]
+\textbf{Fragestellung:} 
+Unter welchem Vorraussetzungen gilt die folgende strikte Ungleichung? \\
+\[
+\prod_{k=1}^{n} (1 + a_k) > 1 + \sum_{k=1}^{n} a_k
+\]
+
+\textbf{Vorüberlegung:} \\
+Wir suchen Vorraussetzungen, die die "Gleichheit" eliminieren, so dass nur noch die strikte "grö{\ss}er als" Ungleichung gilt. Wann sind die Terme also gleich? Beginnen wir mit dem kleinsten $n \in \mathbb{N}$:
+\begin{align*} n = 1 \\
+    &\prod_{k=1}^{1} (1 + a_k) > 1 + \sum_{k=1}^{1} a_k\\
+    &=1 + a_1 = 1 + a_1\\
+\end{align*}
+Die erste Vorraussetzung ist also $n \geq 2$ \\
+
+\textbf{Beweis per Induktionsverfahren:} \\
+\\
+\textit{IA:} Sei $n=2$
+\begin{align*}
+    &\prod_{k=1}^{2} (1 + a_k) \\
+    &=(1+a_1)(1+a_2)\\
+    &=(1+a)^2\\
+    &=1+2a+a^2\\
+\end{align*}
+(...)
+
+\textit{IV:} (...)
+
+
+\textit{IS:} Sei $n=n+1$.\\
+\begin{align*} 
+    &\prod_{k=1}^{n+1} (1 + a_k) > 1 + \sum_{k=1}^{n+1} a_k\\
+    &=(1+a)^{n+1} > 1 + (n+1) \cdot a \\
+\end{align*}
+(...)
+\qed \\
+\textbf{Fazit:} \\
+\\
+Die strikte Ungleichung gilt unter folgenden Vorraussetzungen:
+\begin{enumerate}
+    \item $n \in \mathbb{N} \geq 2$ \\
+    \item $a \neq 0$
+\end{enumerate}
 
 
 \end{document}
